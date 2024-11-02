@@ -1,0 +1,43 @@
+export const HTTP_STATUS = {
+  BAD_REQUEST: 400,
+  NOT_FOUND: 404,
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+  CONFLICT: 409,
+  INTERNAL_SERVER_ERROR: 500,
+  OK: 200,
+  CREATED: 201,
+  NO_CONTENT: 204,
+  BAD_GATEWAY: 502,
+  SERVICE_UNAVAILABLE: 503,
+};
+const RE_MESSAGE = "Please try again later";
+
+export const MESSAGES = {
+  REQUIRED_FIELDS: "All fields are required.",
+  USER_EXISTS: "Username or Email already exists.",
+  ACCOUNT_CREATED: "Account created successfully.",
+  ERROR_CREATING_ACCOUNT: `Error creating account. ${RE_MESSAGE}`,
+  INVALID_TOKEN: "Invalid or expired token.",
+  ACCOUNT_VERIFIED: "Account verified successfully.",
+  ERROR_VERIFYING_ACCOUNT: `Error verifying account. ${RE_MESSAGE}`,
+  INVALID_CREDENTIALS: "Invalid username or password.",
+  LOGIN_SUCCESS: "Login successful.",
+  ERROR_LOGGING_IN: `Error logging in. ${RE_MESSAGE}`,
+  UNAUTHORIZED: "Unauthorized access.",
+  ERROR_AUTHORIZED: `Error authorizing user. ${RE_MESSAGE}`,
+  FORGOT_PASSWORD: "Password reset link sent to your email",
+  ERROR_FORGOT_PASSWORD: `Error sending password reset link. ${RE_MESSAGE}`,
+  PASSWORD_RESET: "Password reset successfully.",
+  ERROR_RESET_PASSWORD: `Error resetting password. ${RE_MESSAGE}`,
+  // TASK MESSAGES
+  CREATING_TASK: "Task created successfully",
+  ERROR_CREATING_TASK: `Error creating Task. ${RE_MESSAGE}`,
+  UPDATING_TASK: "Task updated successfully",
+  ERROR_UPDATING_TASK: `Error updating Task. ${RE_MESSAGE}`,
+  DELETING_TASK: "Task deleted successfully",
+  ERROR_DELETING_TASK: `Error deleting Task. ${RE_MESSAGE}`,
+  TASK_NOT_FOUND: "Task not found",
+  TASK_FETCHED: "Fetched Task",
+  ERROR_FETCHING_TASK: `Error fetching Task. ${RE_MESSAGE}`,
+};
