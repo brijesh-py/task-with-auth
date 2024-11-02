@@ -5,7 +5,7 @@ import { errorResponse } from "../utils/errorResponse";
 const authMiddleware = async (req: any, res: any, next: any) => {
   try {
     const token =
-      req.cookies?.token || req.headers.authorization.replace("Bearer ", "");
+      req.cookies?.token || req.headers?.authorization?.replace("Bearer ", "");
     if (!token) {
       return res.status(HTTP_STATUS.UNAUTHORIZED).json({
         success: false,

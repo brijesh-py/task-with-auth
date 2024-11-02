@@ -6,7 +6,7 @@ export const accessTokenAndSetCookie = async (res: any, userId: string) => {
       {
         _id: userId,
       },
-      process.env.JWT_TOKEN,
+      process.env.JWT_SECRET,
       {
         expiresIn: "7d",
       }
@@ -14,7 +14,7 @@ export const accessTokenAndSetCookie = async (res: any, userId: string) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: process.env.NODE_ENV==='production',
     });
     return token;
   } catch (error) {
