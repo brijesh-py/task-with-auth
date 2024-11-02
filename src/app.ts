@@ -14,5 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1", userRoutes);
 app.use("/api/v1/", authMiddleware, taskRoutes);
+app.use("/test", (req, res) => {
+  res.status(200).json({
+    message: "test",
+  });
+});
 
 export default app;
